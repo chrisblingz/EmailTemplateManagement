@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ETM.App</title>
+    <title>@ViewData["Title"] - ETM </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ETM.App.styles.css" asp-append-version="true" />
+    <link href="~/summernote/summernote.css" rel="stylesheet" />
+    <link href="~/summernote/summernote-bs4.css" rel="stylesheet" />
+    <link href="~/summernote/summernote-lite.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -24,6 +27,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="EmailTemplate" asp-action="Index">Email Templates</a>
                         </li>
                     </ul>
                 </div>
@@ -44,6 +53,34 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/data-table.js"></script>
+    <script src="~/js/jquery.dataTables.js"></script>
+    <script src="~/js/dataTables.bootstrap4.js"></script>
+    <script src="~/summernote/summernote.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('.table').DataTable();
+        });
+
+        $(function() {
+
+            $(document).ready(function() {
+
+                "use strict"; // Start of use strict
+                //summernote
+                $('#summernote').summernote({
+                    height: 400, // set editor height
+                    minHeight: null, // set minimum height of editor
+                    maxHeight: null, // set maximum height of editor
+                    focus: true                  // set focus to editable area after initializing summernote
+                });
+
+
+            });
+
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
