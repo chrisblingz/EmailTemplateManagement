@@ -67,9 +67,26 @@ namespace ETM.App.Controllers
             }
         }
 
-        public IActionResult Edit()
+        public IActionResult Edit(int Id)
         {
-            return View(new EmailTemplateViewModel());
+            var data = _emailTemplateService.GetEmailTemplate(Id);
+            if(data == null)
+            {
+                ModelState.AddModelError("Email Tamplate", "Email Taplate not found");
+                return RedirectToAction(nameof(Index));
+            }
+
+            var template = new EmailTemplateViewModel()
+            {
+                Id = data.Id,
+                Name = data.Name,
+                Subject = data.Subject,
+                Code = data.Code,
+                Template = data.Template
+
+            };
+
+            return View(template);
         }
 
         [HttpPost]
