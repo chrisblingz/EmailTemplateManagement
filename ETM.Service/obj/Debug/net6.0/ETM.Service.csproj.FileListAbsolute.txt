@@ -1,0 +1,17 @@
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Service.deps.json
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Service.dll
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Service.pdb
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Data.dll
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Entity.dll
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Data.pdb
+D:\Development\ETM\ETM.Service\bin\Debug\net6.0\ETM.Entity.pdb
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.csproj.AssemblyReference.cache
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.AssemblyInfoInputs.cache
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.AssemblyInfo.cs
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.csproj.CoreCompileInputs.cache
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.csproj.CopyComplete
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.dll
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\refint\ETM.Service.dll
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ETM.Service.pdb
+D:\Development\ETM\ETM.Service\obj\Debug\net6.0\ref\ETM.Service.dll
