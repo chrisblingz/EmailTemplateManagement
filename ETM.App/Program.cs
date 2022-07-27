@@ -13,6 +13,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IEmailTemplateService, EmailTemplateService>();
 builder.Services.AddTransient<IEmailLogService, EmailLogService>();
+builder.Services.AddSingleton<IUtilityService, UtilityService>();
+builder.Services.AddSingleton<IEmailService, EmailService>();
 
 
 var app = builder.Build();
