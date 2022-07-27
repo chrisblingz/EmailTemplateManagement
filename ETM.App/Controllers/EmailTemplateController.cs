@@ -119,11 +119,7 @@ namespace ETM.App.Controllers
             }
             try
             {
-                if (_emailTemplateService.EmailTemplateExists(model.Code))
-                {
-                    ModelState.AddModelError("Email Tamplate", "Email Tamplate Code already exist");
-                    return View(model);
-                }
+
                 if (model.Id == 0)
                 {
                     ModelState.AddModelError("Email Tamplate", "Email Tamplate does already exist");
@@ -139,6 +135,7 @@ namespace ETM.App.Controllers
 
                 var template = new EmailTemplate()
                 {
+                    Id = model.Id,
                     Name = model.Name,
                     Code = model.Code,
                     Subject = model.Subject,

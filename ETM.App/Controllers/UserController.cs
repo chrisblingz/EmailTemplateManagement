@@ -36,6 +36,7 @@ namespace ETM.App.Controllers
                     FirstName = x.Firstname,
                     Middlename = x.Middlename,
                     Lastname = x.Lastname,
+                    Fullname = x.Firstname + " " + x.Middlename + " " + x.Lastname,
                     Passcode = x.Passcode,
                     PhoneNumber = x.PhoneNumber,
                     Username = x.Username,
@@ -102,7 +103,7 @@ namespace ETM.App.Controllers
                 email.Subject = template.Subject;
 
                 email.MessageBody = template.Template.Replace("[[Firstname]]", model.FirstName)
-                    .Replace("[[PhoneNumber]]", model.PhoneNumber).Replace("[[Fullname]]", model.Fullname)
+                    .Replace("[[PhoneNumber]]", model.PhoneNumber).Replace("[[Fullname]]", model.FirstName + " " + model.Middlename + " " + model.Lastname)
                     .Replace("[[Passcode]]", model.Passcode);
 
                 await _emailService.SendEmailAsync(email);
@@ -112,7 +113,7 @@ namespace ETM.App.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message + ":" + ex.StackTrace);
+                _logger.LogError(ex.Message + " : " + ex.StackTrace);
                 return View(model);
             }
         }
